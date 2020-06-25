@@ -1,6 +1,7 @@
 # ks
 Kitchen Sink
 
+![KS](https://github.com/jdutete/ks/workflows/KS/badge.svg?branch=master)
 
 run zipkin
 
