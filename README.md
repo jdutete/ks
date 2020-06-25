@@ -1,5 +1,5 @@
-# ks
-Kitchen Sink
+# Spring Camel Fun
+Fun with Spring Boot and Camel
 
 ![KS](https://github.com/jdutete/ks/workflows/KS/badge.svg?branch=master)
 
