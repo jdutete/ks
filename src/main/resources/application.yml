@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: user-service
+
+server:
+  port: 9999
+
+logging:
+  pattern:
+    console: '%d{dd.MM.yyyy HH:mm:ss:SSS} | %-5p [%X{X-B3-TraceId:-}] %-15t | %-20M | [%F:%L] %m%n'
+    file: '%d{dd.MM.yyyy HH:mm:ss:SSS} | %-5p [%X{X-B3-TraceId:-}] %-15t | %-20M | [%F:%L] %m%n'
+  file:
+    name: /opt/sba/logs/ks.log
+  level:
+    com.jdutete.ks: INFO
+    root: INFO
+
+ks:
+  endpoints:
+    users: http://localhost:9999/users
+  timer:
+    add-user:
+      delay: 3000
+      fixed-rate: true
+      period: 5000
+  quartz:
+    add-user:
+      cron: 0+*+*+*+*+?
